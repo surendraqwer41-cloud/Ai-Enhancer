@@ -40,7 +40,7 @@ jobs:
         run: npx cap sync android
 
       - name: Fix gradle wrapper
-        run: cd android && gradle wrapper --gradle-version 8.0
+        run: cd android && gradle wrapper --gradle-version 8.13
 
       - name: Grant execute permission for gradlew
         run: chmod +x android/gradlew
