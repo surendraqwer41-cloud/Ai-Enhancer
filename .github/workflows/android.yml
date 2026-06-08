@@ -8,30 +8,42 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
-  with:
-    node-version: '22 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
 
-      - run: npm install
-      - run: npm run build
+      - name: Install dependencies
+        run: npm install
 
-      - run: npm install @capacitor/core @capacitor/cli @capacitor/android
+      - name: Build web app
+        run: npm run build
 
-      - run: npx cap init "AI Enhancer" com.aienhancer.app --web-dir=dist
+      - name: Install Capacitor
+        run: npm install @capacitor/core @capacitor/cli @capacitor/android
 
-      - run: npx cap add android
+      - name: Init Capacitor
+        run: npx cap init "AI Enhancer" com.aienhancer.app --web-dir=dist
 
-      - run: npx cap sync android
+      - name: Add Android
+        run: npx cap add android
 
-      - run: chmod +x android/gradlew
+      - name: Sync Android
+        run: npx cap sync android
 
-      - run: |
+      - name: Make Gradle executable
+        run: chmod +x android/gradlew
+
+      - name: Build APK
+        run: |
           cd android
           ./gradlew assembleDebug
 
-      - uses: actions/upload-artifact@v4
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
         with:
           name: apk
           path: android/app/build/outputs/apk/debug/*.apk
