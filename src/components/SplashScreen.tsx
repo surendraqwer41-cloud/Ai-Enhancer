@@ -84,11 +84,11 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
         </div>
 
         {/* App Title */}
-        <h1 className="text-4xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-100 to-purple-200">
-          Photo Revive AI
+        <h1 className="text-4xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-indigo-250 via-indigo-300 to-purple-400">
+          UltraHD AI
         </h1>
-        <p className="mt-2 text-sm text-slate-400 font-medium tracking-wide">
-          ULTRA-HD IMAGE RESTORATION SUITE
+        <p className="mt-2 text-xs text-indigo-400 font-bold tracking-widest uppercase">
+          Neural Resolution & Enhancement Suite
         </p>
 
         {/* Loading Bar and Stats */}

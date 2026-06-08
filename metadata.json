@@ -1,5 +1,5 @@
 {
-  "name": "Photo Revive AI",
+  "name": "UltraHD AI",
   "description": "Unlock high-definition clarity. An ultimate AI-powered photo enhancement suite with deep sharpening, denoising, pixel-level scratch repair, face smoothing, old photo colorization, and instant before/after slider comparison.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]

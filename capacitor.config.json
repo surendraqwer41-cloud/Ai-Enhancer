@@ -1,0 +1,6 @@
+{
+  "appId": "com.aienhancer.app",
+  "appName": "AI Enhancer",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}

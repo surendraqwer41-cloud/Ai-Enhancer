@@ -42,4 +42,4 @@ export interface SavedPhoto {
   upscale: number;
 }
 
-export type AppTab = "home" | "enhance" | "gallery" | "settings";
+export type AppTab = "home" | "upload" | "processing" | "enhance" | "gallery" | "settings";
